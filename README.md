@@ -3,8 +3,7 @@
 A document retrieval system implementing TF-IDF, BM25+, and Semantic Embeddings for the Data Science course project.
 
 ## Team Members
-- Nour (Data Prep, TF-IDF, BM25+)
-- Aya (Embeddings, Visualization, Evaluation)
+*(To be added)*
 
 ## Project Overview
 
