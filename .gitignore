@@ -34,3 +34,6 @@ Thumbs.db
 # Project specific
 assets/
 Project 2026.pdf
+
+# Keep reports folder but ignore large files
+!reports/
