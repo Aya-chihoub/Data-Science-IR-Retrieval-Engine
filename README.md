@@ -3,7 +3,10 @@
 A document retrieval system implementing TF-IDF, BM25+, and Semantic Embeddings for the Data Science course project.
 
 ## Team Members
-*(To be added)*
+- Yannis Hemdane
+- Rayan Khatim
+- Nour el imene Khelassi
+- Aya Chihoub
 
 ## Project Overview
 
@@ -21,9 +24,11 @@ This project implements an information retrieval pipeline that:
 |--------|-----------|--------------|-----|
 | TF-IDF | 0.1122 | 0.0657 | 0.2021 |
 | BM25+ | 0.1506 | 0.0896 | 0.2452 |
-| **Embeddings** | **0.4456** | **0.2703** | **0.5658** |
+| **Embeddings** | **0.1959** | **0.1141** | **0.2745** |
 
-Embeddings significantly outperform traditional methods!
+**Kaggle Score:** 0.39344
+
+Embeddings outperform traditional keyword-based methods across all metrics!
 
 ## Project Structure
 
