@@ -3,8 +3,8 @@
 A document retrieval system implementing TF-IDF, BM25+, and Semantic Embeddings for the Data Science course project.
 
 ## Team Members
-- Yannis Hemdane
-- Rayan Khatim
+- Yanis Hemdane
+- Rayane Khatim
 - Nour el imene Khelassi
 - Aya Chihoub
 
