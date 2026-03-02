@@ -170,7 +170,7 @@ The distribution is imbalanced: \textit{tex} has about 3 times more documents th
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{reports/category_distribution.png}
+    \includegraphics[width=0.75\textwidth]{Images/categories.png}
     \caption{Category distribution across the document corpus.}
     \label{fig:categories}
 \end{figure}
@@ -232,14 +232,14 @@ To better understand the structure of our embeddings, we visualized a random sam
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{reports/tsne_visualization.png}
+    \includegraphics[width=0.85\textwidth]{Images/visualisation_tsne.png}
     \caption{t-SNE projection of document embeddings, colored by category.}
     \label{fig:tsne}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{reports/umap_visualization.png}
+    \includegraphics[width=0.85\textwidth]{Images/visualisation_umap.png}
     \caption{UMAP projection of document embeddings, colored by category.}
     \label{fig:umap}
 \end{figure}
@@ -289,7 +289,7 @@ We evaluate our retrieval systems using three standard metrics, all computed wit
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{reports/model_comparison.png}
+    \includegraphics[width=\textwidth]{Images/mdoel_compar.png}
     \caption{Comparison of the three retrieval methods across all metrics.}
     \label{fig:comparison}
 \end{figure}
@@ -336,7 +336,7 @@ The choice of $k$ affects the metrics differently. A larger $k$ generally increa
 
 Based on our evaluation results, we chose the \textbf{embedding-based method} for our Kaggle submission, as it consistently outperformed both TF-IDF and BM25+ across all metrics.
 
-For the 141 test queries, we generated embeddings using the same model, retrieved the top-10 most similar documents, and predicted the query category using a majority vote among the categories of the retrieved documents.
+For the 141 test queries, we generated embeddings using the same model and retrieved the top-10 most similar documents. Since category classification is not part of Phase~1, we left the category field as ``?'' in the submission file. Category prediction will be addressed in Phase~2.
 
 % ══════════════════════════════════════════════════════════
 \section{Conclusion}
