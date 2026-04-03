@@ -3,6 +3,9 @@ data/
 *.json
 *.csv
 
+# Embedding cache (large .npy)
+cache/
+
 # Large binary files
 *.pkl
 *.xls
@@ -34,6 +37,14 @@ Thumbs.db
 # Project specific
 assets/
 Project 2026.pdf
+
+# Stale local duplicate tree (safe to delete if empty)
+vs_code/
+
+# LaTeX build artifacts (keep .tex / .pdf you care about)
+*.aux
+*.toc
+*.out
 
 # Keep reports folder but ignore large files
 !reports/

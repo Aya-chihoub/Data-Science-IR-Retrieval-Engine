@@ -11,10 +11,11 @@ from sklearn.metrics.pairwise import cosine_similarity
 from tqdm import tqdm
 import time
 
+from ir_data_paths import DATA_DIR
+
 # ============================================================
 # CONFIGURATION
 # ============================================================
-DATA_DIR = Path('data/retrieval-engine-competition')
 K = 10
 # Set to None to process all documents, or a number for sampling
 SAMPLE_SIZE = 10000  # Start with 10k docs for testing (set to None for full)

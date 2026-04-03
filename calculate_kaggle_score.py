@@ -14,8 +14,8 @@ ground_truth = results.get('ground_truth_parsed')
 if ground_truth is None:
     # Parse it if not already done
     import json
-    from pathlib import Path
-    DATA_DIR = Path('data/retrieval-engine-competition')
+    from ir_data_paths import DATA_DIR
+
     with open(DATA_DIR / 'qgts_train.json', 'r') as f:
         raw_gt = json.load(f)
     ground_truth = {}

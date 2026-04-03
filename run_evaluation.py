@@ -6,7 +6,7 @@ import pickle
 import numpy as np
 from pathlib import Path
 
-DATA_DIR = Path('data/retrieval-engine-competition')
+from ir_data_paths import DATA_DIR
 
 # Load ground truth
 with open(DATA_DIR / 'qgts_train.json', 'r') as f:

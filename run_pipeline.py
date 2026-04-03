@@ -14,10 +14,11 @@ from rank_bm25 import BM25Plus
 from tqdm import tqdm
 import time
 
+from ir_data_paths import DATA_DIR
+
 # ============================================================
 # CONFIGURATION
 # ============================================================
-DATA_DIR = Path('data/retrieval-engine-competition')
 K = 10  # Top-k results
 
 # ============================================================
@@ -32,7 +33,12 @@ df_queries_train = pd.read_json(DATA_DIR / 'queries_train.json')
 df_queries_test = pd.read_json(DATA_DIR / 'queries_test.json')
 
 with open(DATA_DIR / 'qgts_train.json', 'r') as f:
-    ground_truth = json.load(f)
+    raw_qgts = json.load(f)
+# List of doc_id strings per query (same as run_evaluation.py)
+ground_truth = {
+    qid: [item['doc_id'] for item in data['relevant_doc_ids']]
+    for qid, data in raw_qgts.items()
+}
 
 print(f"Documents: {len(df_docs):,}")
 print(f"Training Queries: {len(df_queries_train):,}")
@@ -212,7 +218,8 @@ results = {
     'bm25_time': bm25_time,
     'doc_ids': doc_ids,
     'query_ids_train': query_ids_train,
-    'ground_truth': ground_truth,
+    'ground_truth': raw_qgts,
+    'ground_truth_parsed': ground_truth,
     'tfidf_vectorizer': tfidf_vectorizer,
     'tfidf_doc_matrix': tfidf_doc_matrix,
     'df_docs': df_docs,
